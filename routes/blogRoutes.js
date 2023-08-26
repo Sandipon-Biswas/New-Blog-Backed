@@ -1,0 +1,10 @@
+const express = require('express');
+const { getAllBlogController, createBlogController, updateBlogColtroller, deleteBlogController, getBlogById, userBlogController } = require('../controllers/blogController');
+const router = express.Router();
+router.get('/all-blog',getAllBlogController);
+router.post('/create-blog',createBlogController);
+router.put('/update-blog/:id',updateBlogColtroller);
+router.get('/get-blog/:id',getBlogById);
+router.delete('/delete-blog/:id',deleteBlogController);
+router.get('/user-blog/:id',userBlogController);
+module.exports=router;
